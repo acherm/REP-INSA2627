@@ -1,5 +1,4 @@
-# REP-INSA2526
-Reproducibility of experiments (INSA 2627)
+# Reproducibility of computational experiments (INSA 2627)
 
 * Introduction/motivation
   - slides: [https://docs.google.com/presentation/d/1J9oXuKFe3xGdVTWqjr8nEd1Dr5DtdevEjVYAOT_TJ10/edit?usp=sharing](https://docs.google.com/presentation/d/1J9oXuKFe3xGdVTWqjr8nEd1Dr5DtdevEjVYAOT_TJ10/edit?usp=sharing)
