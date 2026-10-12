@@ -42,6 +42,8 @@ https://docs.google.com/document/d/1jYBh6aIoE9DpiRwvES2tSn7TLTfyHYMJhWkkkFKEH0I/
 
 ## Papers to reproduce and replicate (choose 1 out of N)
 
+Fill in your group (names) and the paper you choose in the shared sheet: https://docs.google.com/spreadsheets/d/160cPwKkVkRtip8unoTdfX5O5G8a-Ux7EOa_dr3UxVk8/edit?usp=sharing
+
 * **Gzip beats BERT**
   - Zhiying Jiang, Matthew Yang, Mikhail Tsirlin, Raphael Tang, Yiqin Dai, Jimmy Lin. 2023. "Low-Resource" Text Classification: A Parameter-Free Classification Method with Compressors. In Findings of the Association for Computational Linguistics: ACL 2023, Toronto, Canada, pp. 6810–6828. https://doi.org/10.18653/v1/2023.findings-acl.426
   - code: https://github.com/bazingagin/npc_gzip
