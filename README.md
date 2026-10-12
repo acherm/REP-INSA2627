@@ -66,6 +66,12 @@ Fill in your group (names) and the paper you choose in the shared sheet: https:/
   - Yosha Iglesias. 2026. Toby – The Oracle By Yosha. Open-source engine (AGPL) and method page (docs/METHOD.md), announced 10 October 2026. https://github.com/Yosha87/Toby (commit d3b9302)
   - TL;DR: Toby predicts human chess moves by combining Maia-3, a network trained to imitate human players, with a Leela search and a rule using 3–4 constants. Its author claims it is the best human-move predictor "for all levels and all time controls", tested with pre-registered protocols on test games that are not public.
 
+* **Risk and confidence of configuration sampling**
+  - Kallistos Weis, Martina Maggio, Norbert Siegmund, Sven Apel. 2026. Evaluating Risk and Confidence in Performance Bounds of Configuration Sampling Strategies. Proceedings of the ACM on Software Engineering 3, FSE (FSE 2026), Article FSE140, pp. 3162–3185. https://doi.org/10.1145/3808147
+  - preprint: https://www.se.cs.uni-saarland.de/publications/docs/WMS+26.pdf
+  - artifact (notebooks and data): https://doi.org/10.5281/zenodo.19682296
+  - TL;DR: The paper asks how sure you can be that a sample of configurations contains the worst (or best) performing one: it defines an a posteriori risk and confidence, and compares 5 sampling strategies on 7 configurable systems (7z, LLVM, BerkeleyDB…) whose configurations were all measured. Recursive statistical search (SRS) gives the tightest guarantees, and solver-based sampling the least reliable ones.
+
 ## Resources
 
   * École Jeunes Chercheuses et Jeunes Chercheurs en Programmation https://gpl-ejcp.github.io/ejcp2023 
