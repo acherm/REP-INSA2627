@@ -16,6 +16,9 @@
 
 * Lab session #1 [https://docs.google.com/presentation/d/1es2htp1XlILsvFiTITykZN0glBkey0T9f05i5OX4Kbk/edit?usp=sharing](https://docs.google.com/presentation/d/1es2htp1XlILsvFiTITykZN0glBkey0T9f05i5OX4Kbk/edit?usp=sharing)
 
+* Lab session #2 aka Reproducibility
+https://docs.google.com/document/d/1QgmkhOL67sk_C_i-J03kkqI-G8O474_jLTQ2Z9JgRxc/edit?usp=sharing
+
 * Reproducibilty foundations (methods, tools, techniques)
   - slides: https://docs.google.com/presentation/d/1eYXHFeSKa2SA8hQyvBB_Z0OY4ufakst5lVNMZzyuvLI/edit?usp=sharing
   - Reproducibility mindset
@@ -25,10 +28,9 @@
   - Threats to validity
   - Automate everything
   - Test and doubt about the quality of your software
- 
-* Lab session #2 aka Reproducibility 
-
+    
 * Lab session #3 aka Replicability, Variability and Consensus
+https://docs.google.com/document/d/1jYBh6aIoE9DpiRwvES2tSn7TLTfyHYMJhWkkkFKEH0I/edit?usp=sharing
 
 
 * Lab session #4 Towards reproducing and replicating results (of one of the papers below)
