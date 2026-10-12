@@ -15,9 +15,10 @@
   - perspective: need to master automated software engineering and variability
 
 * Lab session #1 [https://docs.google.com/presentation/d/1es2htp1XlILsvFiTITykZN0glBkey0T9f05i5OX4Kbk/edit?usp=sharing](https://docs.google.com/presentation/d/1es2htp1XlILsvFiTITykZN0glBkey0T9f05i5OX4Kbk/edit?usp=sharing)
+  - instructions: [tp1-associativity-2627.md](tp1-associativity-2627.md) (complements the slides)
 
 * Lab session #2 aka Reproducibility
-https://docs.google.com/document/d/1QgmkhOL67sk_C_i-J03kkqI-G8O474_jLTQ2Z9JgRxc/edit?usp=sharing
+  - instructions: [tp2-reproducibility-2627.md](tp2-reproducibility-2627.md)
 
 * Reproducibilty foundations (methods, tools, techniques)
   - slides: https://docs.google.com/presentation/d/1eYXHFeSKa2SA8hQyvBB_Z0OY4ufakst5lVNMZzyuvLI/edit?usp=sharing
