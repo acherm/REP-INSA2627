@@ -42,7 +42,27 @@ https://docs.google.com/document/d/1jYBh6aIoE9DpiRwvES2tSn7TLTfyHYMJhWkkkFKEH0I/
 
 ## Papers to reproduce and replicate (choose 1 out of N)
 
-list available Monday 12 october
+* **Gzip beats BERT**
+  - Zhiying Jiang, Matthew Yang, Mikhail Tsirlin, Raphael Tang, Yiqin Dai, Jimmy Lin. 2023. "Low-Resource" Text Classification: A Parameter-Free Classification Method with Compressors. In Findings of the Association for Computational Linguistics: ACL 2023, Toronto, Canada, pp. 6810–6828. https://doi.org/10.18653/v1/2023.findings-acl.426
+  - code: https://github.com/bazingagin/npc_gzip
+  - critique: Ken Schutte. 2023. Bad numbers in the "gzip beats BERT" paper? Blog post, 17 July 2023. https://kenschutte.com/gzip-knn-paper/
+  - TL;DR: The paper classifies text with no training and no GPU, using gzip compression distances and a k-nearest-neighbour vote, and reports accuracy on par with BERT on several datasets. Schutte re-ran the released code and showed that the way accuracy is computed inflates these numbers.
+
+* **Nix: reproducible builds at scale**
+  - Julien Malka, Stefano Zacchiroli, Théo Zimmermann. 2025. Does Functional Package Management Enable Reproducible Builds at Scale? Yes. In Proceedings of the 22nd IEEE/ACM International Conference on Mining Software Repositories (MSR 2025), Ottawa, Canada, pp. 775–787. https://doi.org/10.1109/MSR66628.2025.00115
+  - preprint: https://arxiv.org/abs/2501.15919
+  - artifacts: https://gitlab.telecom-paris.fr/julien.malka/does-functional-package-management-enable-reproducible-builds-at-scale
+  - data: https://doi.org/10.5281/zenodo.14736078 · https://doi.org/10.5281/zenodo.14728623
+  - TL;DR: The authors rebuilt 709,816 Nix packages from 17 nixpkgs snapshots (2017–2023) and compared each rebuild bit-for-bit with the official binaries. They found 69–91% of builds reproducible, classified the causes of the failures, and released their build pipeline, data and logs.
+
+* **The car-wash test**
+  - Mathieu Acher. 2026. Le test du lave-auto : les LLMs ont-ils vraiment du sens commun ? [The car-wash test: do LLMs really have common sense?] Blog post (in French), 26 May 2026. https://blog.mathieuacher.com/LLMCarWashCommonSense/
+  - scripts, raw LLM answers and judge verdicts: https://github.com/acherm/laveauto-llm
+  - TL;DR: The study asks 8 LLMs, 120 times each and in two French wordings, "I want to wash my car, the car wash is 150 m away: walk or drive?", and an LLM judge scores every answer on two separate criteria. A simple rewording flips some models by about 58 points, in either direction.
+
+* **Toby, The Oracle By Yosha**
+  - Yosha Iglesias. 2026. Toby – The Oracle By Yosha. Open-source engine (AGPL) and method page (docs/METHOD.md), announced 10 October 2026. https://github.com/Yosha87/Toby (commit d3b9302)
+  - TL;DR: Toby predicts human chess moves by combining Maia-3, a network trained to imitate human players, with a Leela search and a rule using 3–4 constants. Its author claims it is the best human-move predictor "for all levels and all time controls", tested with pre-registered protocols on test games that are not public.
 
 ## Resources
 
