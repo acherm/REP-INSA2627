@@ -1,0 +1,159 @@
+/* ===========================================================================
+   Thème CPOO — support de cours (reveal.js 5.x)
+   Source de vérité : tools/theme/cpoo.css. Une copie est déposée dans chaque
+   dossier de deck par le build (« make theme ») pour que les decks restent
+   autonomes (ouverture en file://). NE PAS ÉDITER la copie.
+
+   Principes : hiérarchie typographique nette, une seule couleur d'accent,
+   figures contraintes pour ne jamais déborder ni être rognées, pied de page
+   qui situe l'auditeur (section + numéro).
+   Espace de coordonnées : 960 × 720 (4/3, comme les planches historiques).
+   =========================================================================== */
+
+:root {
+  --ink:      #16233A;   /* texte principal */
+  --ink-soft: #46536B;   /* texte secondaire */
+  --accent:   #A4161A;   /* rouge sobre : titres de section, filets */
+  --accent-2: #2A6F97;   /* bleu : liens, éléments techniques */
+  --paper:    #FCFCFA;   /* fond */
+  --rule:     #DDE1E7;   /* filets discrets */
+  --code-bg:  #F5F6F8;
+}
+
+/* ---------- Base ---------- */
+.reveal { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+          color: var(--ink); font-size: 26px; font-weight: 400; }
+.reveal .slides { text-align: left; }
+.reveal .slide-background { background-color: var(--paper); }
+.reveal .slides > section,
+.reveal .slides > section > section { padding: 44px 56px 78px; box-sizing: border-box;
+                                      height: 100%; }
+
+/* ---------- Titres ---------- */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-weight: 650; text-transform: none; letter-spacing: -0.01em;
+  color: var(--ink); margin: 0 0 18px; line-height: 1.12; text-shadow: none; }
+.reveal h1 { font-size: 46px; }
+.reveal h2 { font-size: 34px; padding-bottom: 10px; position: relative; }
+/* filet d'accent sous le titre de slide */
+.reveal h2::after { content: ""; position: absolute; left: 0; bottom: 0;
+                    width: 62px; height: 3px; background: var(--accent);
+                    border-radius: 2px; }
+.reveal h3 { font-size: 27px; color: var(--ink-soft); }
+.reveal h4 { font-size: 23px; color: var(--ink-soft); }
+
+/* ---------- Texte courant ---------- */
+.reveal p  { font-size: 25px; line-height: 1.42; margin: 0 0 14px; }
+.reveal ul, .reveal ol { display: block; margin: 0 0 14px 1.1em; }
+.reveal li { font-size: 24px; line-height: 1.38; margin: 7px 0; }
+.reveal li li { font-size: 21px; color: var(--ink-soft); }
+.reveal ul li::marker { color: var(--accent); }
+.reveal ol li::marker { color: var(--accent); font-weight: 600; }
+.reveal strong { color: var(--ink); font-weight: 680; }
+.reveal em { color: var(--ink-soft); }
+.reveal a { color: var(--accent-2); text-decoration: none;
+            border-bottom: 1px solid rgba(42,111,151,.35); }
+.reveal small { font-size: 0.72em; color: var(--ink-soft); }
+
+/* ---------- Citations ---------- */
+.reveal blockquote { font-size: 23px; line-height: 1.4; width: auto;
+  margin: 14px 0; padding: 10px 18px; background: transparent; box-shadow: none;
+  border-left: 4px solid var(--accent); color: var(--ink-soft); font-style: normal; }
+.reveal blockquote p { font-size: inherit; margin: 0; }
+
+/* ---------- Code ---------- */
+.reveal pre { width: 100%; margin: 12px 0; box-shadow: none; font-size: 18px;
+              line-height: 1.36; }
+.reveal pre code { max-height: 560px; padding: 14px 16px; border-radius: 8px;
+                   background: var(--code-bg); border: 1px solid var(--rule);
+                   overflow: auto; }
+.reveal code:not(pre code) { background: transparent; padding: 0;
+  font-size: 0.92em; color: #31506B; }
+/* dans un titre, le code suit la couleur du titre */
+.reveal h1 code, .reveal h2 code, .reveal h3 code,
+.reveal h4 code, .reveal .cpoo-footer code { color: inherit; }
+
+/* ---------- Tableaux ---------- */
+.reveal table { font-size: 21px; line-height: 1.32; margin: 12px 0;
+                border-collapse: collapse; width: 100%; }
+.reveal table th { text-align: left; font-weight: 650; color: var(--ink);
+  border-bottom: 2px solid var(--accent); padding: 7px 12px; }
+.reveal table td { padding: 6px 12px; border-bottom: 1px solid var(--rule); }
+.reveal table tr:last-child td { border-bottom: none; }
+
+/* ---------- Figures : jamais rognées, jamais géantes ----------
+   La slide est une colonne flex ; la figure prend la place restante et se
+   contient (object-fit), ce qui règle les deux défauts observés :
+   figures qui débordent, figures dont on ne voit qu'un morceau.            */
+.reveal .slides section.has-figure { display: flex; flex-direction: column; }
+.reveal section img { display: block; margin: 10px auto; max-width: 100%;
+  max-height: 470px; width: auto; height: auto; object-fit: contain;
+  flex: 0 1 auto; min-height: 0; }
+.reveal section img[src^="puml/"] { max-height: 455px; }
+.reveal .mermaid { display: flex; justify-content: center; margin: 8px 0; }
+.reveal .mermaid svg { max-width: 100%; max-height: 455px; height: auto; }
+/* deux figures côte à côte : <div class="cols"> */
+.reveal .cols { display: flex; gap: 24px; align-items: flex-start; }
+.reveal .cols > * { flex: 1 1 0; min-width: 0; }
+
+/* ---------- Diapositive de titre ---------- */
+.reveal section.titre { display: flex; flex-direction: column;
+  justify-content: center; padding-left: 64px; }
+.reveal section.titre h1 { font-size: 50px; margin-bottom: 6px; }
+.reveal section.titre h1::after { content: ""; display: block; width: 90px;
+  height: 4px; background: var(--accent); border-radius: 2px; margin: 18px 0 0; }
+.reveal section.titre .meta { margin-top: 26px; font-size: 23px;
+  color: var(--ink-soft); line-height: 1.6; }
+.reveal section.titre .meta strong { color: var(--ink); }
+
+/* ---------- Intercalaire de section + agenda ---------- */
+.reveal section.section-divider { display: flex; flex-direction: column;
+  justify-content: center; }
+.reveal section.section-divider h2 { font-size: 40px; color: var(--accent); }
+.reveal section.section-divider h2::after { display: none; }
+.reveal .agenda { list-style: none; margin: 22px 0 0; padding: 0;
+                  counter-reset: agenda; }
+.reveal .agenda li { counter-increment: agenda; font-size: 23px; margin: 9px 0;
+  color: #93A0B4; display: flex; gap: 14px; align-items: baseline; }
+.reveal .agenda li::before { content: counter(agenda); font-variant-numeric: tabular-nums;
+  font-weight: 650; color: #C3CBD8; min-width: 26px; }
+.reveal .agenda li.courant { color: var(--ink); font-weight: 620; }
+.reveal .agenda li.courant::before { color: var(--accent); }
+.reveal .agenda li.fait { color: var(--ink-soft); }
+
+/* ---------- Diapositives de corrigé (version « -prof » seulement) ---------- */
+.reveal section.reponse h2::after { background: #2E7D4F; }
+.reveal section.reponse::before { content: "CORRIGÉ — version enseignant";
+  position: absolute; top: 14px; right: 56px; font-size: 13px; font-weight: 650;
+  letter-spacing: .04em; color: #2E7D4F; }
+
+/* ---------- Pied de page (fil d'Ariane) ---------- */
+.reveal .cpoo-footer { position: absolute; bottom: 16px; left: 56px; right: 96px;
+  background: var(--paper);   /* right: 96px -> le compteur passe devant les
+                                 flèches de navigation, pas dessous */
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 14px; color: #93A0B4; pointer-events: none;
+  border-top: 1px solid var(--rule); padding-top: 7px; z-index: 5; }
+.reveal .cpoo-footer .sec { color: var(--ink-soft); }
+/* pas de pied de page sur les planches scannées ni sur le titre */
+.reveal section[data-background-image] .cpoo-footer,
+.reveal section.titre .cpoo-footer,
+.reveal section.section-divider .cpoo-footer { display: none; }
+
+/* ---------- Divers ---------- */
+.reveal .progress { color: var(--accent); height: 3px; }
+.reveal .controls { color: #B9C2CE; }
+.reveal .slide-number { background: transparent; color: #A9B2BF; font-size: 14px; }
+/* À l'impression, reveal passe les sections en position: relative et leur
+   hauteur devient celle du contenu : le pied de page, absolu, viendrait se
+   poser AU MILIEU d'un long bloc de code (constaté). Il n'a d'intérêt qu'à
+   l'écran (cours en direct) ; le PDF, lui, est paginé par le lecteur. */
+@media print { .reveal .cpoo-footer { display: none !important; } }
+
+/* Diapositives figure + code + texte (gabarit des patrons, GABARIT-PATRON.md) :
+   posées via <!-- .slide: class="figure-courte" --> ou "figure-moyenne". */
+.reveal section.figure-courte img { max-height: 270px; width: auto; }
+.reveal section.figure-moyenne img { max-height: 380px; width: auto; }
+/* Diapositive consacrée à un seul diagramme (le « diagramme » du gabarit des patrons). */
+.reveal section.figure-pleine img { max-height: 560px; width: auto; display: block; margin: 0 auto; }

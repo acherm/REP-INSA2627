@@ -30,8 +30,10 @@
   - Automate everything
   - Test and doubt about the quality of your software
     
-* Lab session #3 aka Replicability, Variability and Consensus
-https://docs.google.com/document/d/1jYBh6aIoE9DpiRwvES2tSn7TLTfyHYMJhWkkkFKEH0I/edit?usp=sharing
+* Lab session #3 aka Replicability and Variability
+  - instructions: [tp3-variability-2627.md](tp3-variability-2627.md)
+  - slides on feature models and UVL: [feature-models-uvl/slides.pdf](feature-models-uvl/slides.pdf)
+  - sampling script: [tp3/sample.py](tp3/sample.py); small examples of variability mechanisms: [toy/](toy/)
 
 
 * Lab session #4 Towards reproducing and replicating results (of one of the papers below)

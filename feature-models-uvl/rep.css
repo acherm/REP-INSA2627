@@ -1,0 +1,5 @@
+/* REP: complements to the CPOO theme.
+   reveal-md 6.1.2 + reveal.js markdown plugin strip every run of 14 spaces in the deck
+   (the <textarea> template starts with 12 spaces). Indent code with tabs, never with
+   14+ spaces in a row: tabs are left alone. */
+.reveal pre code { tab-size: 3; -moz-tab-size: 3; }

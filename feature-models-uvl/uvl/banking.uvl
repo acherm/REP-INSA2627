@@ -1,0 +1,37 @@
+features
+	Banking {abstract}
+		mandatory
+			Language {abstract}
+				alternative
+					Python
+						alternative
+							CPython
+							PyPy
+					C
+						mandatory
+							Compiler {abstract}
+								alternative
+									GCC
+									Clang
+						optional
+							Options {abstract}
+								or
+									"-O2"
+									"-ffast-math"
+					Java
+			Precision {abstract}
+				alternative
+					Float
+					Double
+					LongDouble
+					Decimal
+			ValueOfE {abstract}
+				alternative
+					Constant
+					Exp1
+					Literal
+
+constraints
+	LongDouble => C    // long double: a C type
+	Decimal => Python | Java    // decimal module, BigDecimal
+	Java & Decimal => !Exp1    // BigDecimal has no exp()

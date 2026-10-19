@@ -1,0 +1,42 @@
+/* ===========================================================================
+   Complément de thème CPOO1 (decks CM1, CM2, CM3, cas d'étude, fiche).
+   Source de vérité : tools/theme/cpoo1.css, déposé par « make theme » dans les
+   decks de CPOO1 SEULEMENT : les decks CPOO2 ne le chargent pas et ne doivent
+   pas le recevoir. NE PAS ÉDITER la copie.
+   =========================================================================== */
+
+/* ---------- Diapositive de titre : logos, réseaux, crédit ---------- */
+/* (repris du deck S00 de CPOO2, désormais commun à tous les decks) */
+.reveal section.titre .logos { display: flex; align-items: center; gap: 44px;
+  margin-top: 36px; }
+.reveal section.titre .logos img { height: 52px; width: auto; max-width: none;
+  min-height: 0; margin: 0; }
+.reveal section.titre .meta p { margin: 0 0 6px; font-size: 22px; }
+.reveal section.titre .meta .reseaux,
+.reveal section.titre .meta .credit { font-size: 17px; }
+.reveal section.titre .meta .credit { color: var(--ink-soft); font-style: italic;
+  line-height: 1.35; }
+
+/* ---------- Figure + code + texte sur la même diapo ---------- */
+.reveal section.figure-courte img { max-height: 270px; width: auto; }
+.reveal section.figure-mini img { max-height: 175px; width: auto; margin: 2px auto; }
+.reveal section.figure-courte .mermaid svg { max-height: 230px; }
+.reveal section.figure-mini .mermaid svg { max-height: 150px; }
+.reveal section.figure-moyenne img { max-height: 380px; width: auto; }
+/* quatre figures en 2 × 2 : deux colonnes de deux figures plafonnées */
+.reveal section.grille4 img { max-height: 205px; width: auto; margin: 4px auto; }
+.reveal section.grille4 .mermaid svg { max-height: 150px; }
+.reveal section.grille4 p { font-size: 22px; margin: 6px 0; }
+.reveal .cols > .col { flex: 1 1 0; min-width: 0; }
+.reveal .cols > .col > :first-child { margin-top: 0; }
+.reveal .cols pre { font-size: 15px; }
+.reveal .cols pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* ---------- Haltes (séries de questions) ---------- */
+.reveal section.halte h2::after { background: var(--accent-2); }
+.reveal section.halte p, .reveal section.halte li { font-size: 23px; }
+
+
+/* ---------- Bloc de code long sur une seule diapo (corrigé TD1, gabarit de cas) ---------- */
+.reveal section.code-dense pre { font-size: 15px; line-height: 1.3; }
+.reveal section.code-dense pre code { max-height: none; }
