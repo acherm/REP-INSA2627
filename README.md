@@ -37,6 +37,7 @@
 
 
 * Lab session #4 Towards reproducing and replicating results (of one of the papers below)
+  - instructions: [tp4-reproduce-replicate-2627.md](tp4-reproduce-replicate-2627.md)
 
 
 * Lab sessions #5 Instructions to report on reproducing and replicating results
