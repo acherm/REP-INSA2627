@@ -7,7 +7,18 @@ You have chosen one paper (see the [README](README.md)). The goal now is to:
    and how, the hypothesis, and the expected results. **The protocol will be validated in the upcoming
    weeks.**
 
-## (Step 1) Read and analyze the paper
+**AI usage:**
+
+* **Steps 1 and 2 are AI-free**: read and analyze the paper yourselves, and answer the
+  questions in your own words, without asking an AI to read, summarize or explain it. The
+  goal is that *you* understand the paper.
+* **From Step 3 on, you can be *assisted* by AI** (e.g. to set up the environment, write
+  scripts). But you remain responsible for what is produced: understand and check it end
+  to end, and be able to review and explain any step (any command, line of code or
+  configuration). Declare the usage in your README: tool, model, what for, and what you
+  checked.
+
+## (Step 1) Read and analyze the paper (AI-free)
 
 Understand the context, domain and scope first: read the abstract, introduction and conclusion to
 get the objectives, hypotheses, methods and key findings. Review the related work the
@@ -22,7 +33,7 @@ paper; they are not an exam: answer them briefly, in your own words):
   differ from?
 * What are the primary objectives? Are there secondary or exploratory questions?
 
-## (Step 2) Identify what reproducibility and replicability require
+## (Step 2) Identify what reproducibility and replicability require (AI-free)
 
 * **Data**: are the datasets available and accessible? It includes pre-processing steps,
   transformations and selection criteria.
@@ -106,4 +117,5 @@ deviation that would indicate fragility of the original findings.
 * the reproduction: Docker setup and scripts, reproduced results compared with the
   paper, documented deviations and challenges, and your conclusion on reproducibility;
 * the replication protocol: variability factors (values, rationale, constraints, feature model),
-  hypotheses and expected results.
+  hypotheses and expected results;
+* the AI usage statement in your README.
