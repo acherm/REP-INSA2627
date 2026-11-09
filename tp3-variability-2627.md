@@ -298,10 +298,12 @@ Before each commit: *Restart Kernel and Run All Cells*.
 
 Your GitHub repository, containing:
 
-* the code to run all the experiments (programs, templates, scripts, Dockerfiles, GitHub
+* the code to run all the experiments (programs including LLM programs, templates, scripts, Dockerfiles, GitHub
   Actions);
 * the feature model (`.uvl`), the sample, and the CSV of results produced by GitHub Actions;
 * a Jupyter notebook detailing the experiments (comparison matrix, variability factors,
   analysis of results, recommendations) and answering the questions;
 * a README.md explaining the architecture of the repository, how to reproduce the results,
   and the AI usage statement.
+
+**Update**: deadline is Friday 13 November 2026, 23:59 Paris time, drop me an email (mathieu.acher@irisa.fr) with the URL of the Github repo. 
